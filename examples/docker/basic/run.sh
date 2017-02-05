@@ -14,7 +14,7 @@ set -u
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-echo "starting crunchy-container..."
+echo "starting crunchy-postgres..."
 
 # if you want to use local host directories for persistence
 # then uncomment out these lines below and use them instead
@@ -33,7 +33,7 @@ echo "starting crunchy-container..."
 #sudo chcon -Rt svirt_sandbox_file_t $DATA_DIR
 
 CONTAINER_NAME=basic
-VOLUME_NAME=basic-example-volume
+VOLUME_NAME=basic-volume
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -62,4 +62,3 @@ docker run \
 	--name=$CONTAINER_NAME \
 	--hostname=$CONTAINER_NAME \
 	-d crunchydata/crunchy-postgres:$CCP_IMAGE_TAG
-

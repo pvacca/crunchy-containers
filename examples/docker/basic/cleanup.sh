@@ -16,7 +16,7 @@
 echo "cleaning up example..."
 
 CONTAINER_NAME=basic
-VOLUME_NAME=basic-example-volume
+VOLUME_NAME=basic-volume
 
 docker stop $CONTAINER_NAME
 docker rm -v $CONTAINER_NAME
