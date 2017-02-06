@@ -14,8 +14,10 @@
 
 set -eu
 
+VERBOSE_TESTS=${VERBOSE_TESTS:-""}
+
 pushd "$BUILDBASE"/cct
 
-go test -run DockerVacuum
+go test $VERBOSE_TESTS -run DockerVacuum
 
 popd

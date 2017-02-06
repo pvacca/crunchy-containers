@@ -14,8 +14,10 @@
 
 set -eu
 
+VERBOSE_TESTS=${VERBOSE_TESTS:-""}
+
 pushd "$BUILDBASE"/cct
 
-go test -run DockerRestore
+go test $VERBOSE_TESTS -run DockerRestore
 
 popd
