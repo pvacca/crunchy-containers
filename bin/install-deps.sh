@@ -18,13 +18,20 @@ wget https://ftp.postgresql.org/pub/pgadmin3/pgadmin4/v1.1/pip/pgadmin4-1.1-py2-
 #
 # download the metrics products, only required to build the containers
 #
-wget -O $BUILDBASE/prometheus-pushgateway.tar.gz https://github.com/prometheus/pushgateway/releases/download/0.3.0/pushgateway-0.3.0.linux-amd64.tar.gz
-wget -O $BUILDBASE/prometheus.tar.gz https://github.com/prometheus/prometheus/releases/download/v1.1.2/prometheus-1.1.2.linux-amd64.tar.gz
+# PUSHGATEWAY_VER="v0.3.1"
+# PUSHGATEWAY=pushgateway-0.3.1.linux-amd64.tar.gz
+wget -O $BUILDBASE/prometheus-pushgateway.tar.gz https://github.com/prometheus/pushgateway/releases/download/v0.3.1/pushgateway-0.3.1.linux-amd64.tar.gz
+#https://github.com/prometheus/pushgateway/releases/download/0.3.0/pushgateway-0.3.0.linux-amd64.tar.gz
+# PROMETHEUS_VER="v1.5.2"
+# PROMETHEUS=prometheus-1.5.2.linux-amd64.tar.gz
+wget -O $BUILDBASE/prometheus.tar.gz https://github.com/prometheus/prometheus/releases/download/v1.5.2/prometheus-1.5.2.linux-amd64.tar.gz
+# https://github.com/prometheus/prometheus/releases/download/v1.1.2/prometheus-1.1.2.linux-amd64.tar.gz
 wget -O $BUILDBASE/grafana.tar.gz https://grafanarel.s3.amazonaws.com/builds/grafana-3.1.1-1470047149.linux-x64.tar.gz
-wget -O /tmp/consul_0.6.4_linux_amd64.zip https://releases.hashicorp.com/consul/0.6.4/consul_0.6.4_linux_amd64.zip
-unzip /tmp/consul*.zip -d /tmp
-rm /tmp/consul*.zip
-mv /tmp/consul $GOBIN
+
+# wget -O /tmp/consul_0.6.4_linux_amd64.zip https://releases.hashicorp.com/consul/0.6.4/consul_0.6.4_linux_amd64.zip
+# unzip /tmp/consul*.zip -d /tmp
+# rm /tmp/consul*.zip
+# mv /tmp/consul $GOBIN
 
 #
 # this set is required to build the docs
