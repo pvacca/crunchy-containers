@@ -1,6 +1,6 @@
 = Crunchy Container Overview
 Crunchy Data Solutions, Inc.
-v1.2.8, {docdate}
+v1.3, {docdate}
 :title-logo-image: image:crunchy_logo.png["CrunchyData Logo",align="center",scaledwidth="80%"]
 
 == Introduction
@@ -11,7 +11,7 @@ within the Crunchy Containers for PostgreSQL.
 The containers and their relationships to the overall architecture
 are depicted below:
 
-image:containers.png
+image::containers.png[containers]
 
 
 == crunchy-postgres 
@@ -160,7 +160,7 @@ examples/openshift/metrics/run.sh
 
 The crunchy-prometheus data in this example is stored in emptyDir volume types.
 To persist the data and grafana templates long term, you will want to
-use NFS volume types as specified in *examples/openshift/metrics/run-nfs.json*.
+use a pvc based  volume types as specified in *examples/openshift/metrics/run-pvc.json*.
 
 When running the metrics containers, the following ports are available:
 

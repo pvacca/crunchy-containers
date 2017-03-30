@@ -13,9 +13,9 @@
 # limitations under the License.
 
 
-source $BUILDBASE/examples/envvars.sh
+source $CCPROOT/examples/envvars.sh
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 $DIR/cleanup.sh
 
-envsubst < $DIR/backup-job-nfs.json | kubectl create -f -
+envsubst < $DIR/backup-job.json | kubectl create -f -

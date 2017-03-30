@@ -1,9 +1,5 @@
 SET application_name="container_setup";
 
-create extension postgis;
-create extension postgis_topology;
-create extension fuzzystrmatch;
-create extension postgis_tiger_geocoder;
 create extension pg_stat_statements;
 create extension pgaudit;
 
@@ -21,10 +17,6 @@ grant all privileges on database PG_DATABASE to PG_USER;
 
 \c PG_DATABASE
 
-create extension postgis;
-create extension postgis_topology;
-create extension fuzzystrmatch;
-create extension postgis_tiger_geocoder;
 create extension pg_stat_statements;
 create extension pgaudit;
 

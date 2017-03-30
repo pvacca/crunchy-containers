@@ -63,7 +63,7 @@
                 "volumes": [{
                     "name": "pgdata",
                     "persistentVolumeClaim": {
-                        "claimName": "pgset-pvc"
+                        "claimName": "crunchy-pvc"
                     }
                 }]
             }

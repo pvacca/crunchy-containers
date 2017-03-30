@@ -12,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-source $BUILDBASE/examples/envvars.sh
+source $CCPROOT/examples/envvars.sh
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 $DIR/cleanup.sh
 
-oc process -f $DIR/backup-job-nfs.json -v CCP_IMAGE_TAG=$CCP_IMAGE_TAG | oc create -f -
+oc process -f $DIR/backup-job.json -v CCP_IMAGE_TAG=$CCP_IMAGE_TAG | oc create -f -

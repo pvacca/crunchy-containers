@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-source $BUILDBASE/examples/envvars.sh
+source $CCPROOT/examples/envvars.sh
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -20,3 +20,4 @@ sudo rm -rf $NFS_PATH/master-dc
 
 oc delete service master-dc replica-dc
 oc delete deployments master-dc replica-dc
+oc delete pod master-dc
